@@ -1,0 +1,14 @@
+{
+    "workbench.colorCustomizations": {
+        "terminal.background": "#000c18"
+    },
+    "workbench.colorCustomizations": {
+        "statusBar.background": "#0A2509"
+    },
+    "workbench.colorCustomizations": {
+        "sideBar.background": "#000d1a",
+        "editorGroupHeader.tabsBackground": "#000d1a",
+        "titleBar.activeBackground": "#000d1a"
+    },
+    "explorer.sortOrder": "type"
+}
