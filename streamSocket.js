@@ -7,7 +7,7 @@ io_stream.of('/user').on('connection', socket => {
     console.log('stream socket connection')
     ss(socket).on('stream', stream => {
         try {
-            const readStream = fs.createReadStream('/video/video-stream.h264')
+            const readStream = fs.createReadStream(`${__dirname}/video/video-stream.h264`)
             readStream.pipe(stream)
         } catch (error) {
             console.log(`error creating read stream: ${error.hasOwnProperty('message') ? error.message : error}`)  

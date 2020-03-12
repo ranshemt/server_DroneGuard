@@ -9,7 +9,7 @@ const streamFunction = async () => {
   const videoStream = streamCamera.createStream();
   let writeStream
   try {
-    writeStream = fs.createWriteStream("/video/video-stream.h264");
+    writeStream = fs.createWriteStream(`${__dirname}/video/video-stream.h264`);
   } catch (error) {
     console.log(`error creating write stream: ${error.hasOwnProperty('message') ? error.message : error}`)
   }
