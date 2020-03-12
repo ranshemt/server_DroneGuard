@@ -1,3 +1,4 @@
+ const fs = require('fs')
 const { StreamCamera, Codec } = require("pi-camera-connect");
 
 const streamCamera = new StreamCamera({
