@@ -7,12 +7,14 @@ const streamFunction = async () => {
   });
   
   const videoStream = streamCamera.createStream();
-  console.log('writeStream will be created')
-  const writeStream = fs.createWriteStream("/video/video-stream.h264");
-  console.log('writeStream created')
+  let writeStream
+  try {
+    writeStream = fs.createWriteStream("/video/video-stream.h264");
+  } catch (error) {
+    console.log(`error creating write stream: ${error.hasOwnProperty('message') ? error.message : error}`)
+  }
   
   videoStream.pipe(writeStream);
-
   await streamCamera.startCapture();
  
     // We can also listen to data events as they arrive
