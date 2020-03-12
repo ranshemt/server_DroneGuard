@@ -13,7 +13,7 @@ const fs = require("fs");
 
 app.get("/video", (req, res) => {
 	try {
-		fs.createReadStream("/video/video-stream.h264").pipe(res);		
+		fs.createReadStream(`${__dirname}/video/video-stream.h264`).pipe(res);		
 	} catch (error) {
 		console.log(`error in /video: ${error.message}`)
 	}
