@@ -1,3 +1,4 @@
+const fs = require('fs')
 const {server} = require('./config')
 const io_stream = require('socket.io').listen(server)
 const ss = require('socket.io-stream')
