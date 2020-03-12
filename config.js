@@ -11,6 +11,10 @@ const drone = dgram.createSocket('udp4')
 const droneState = dgram.createSocket('udp4')
 const fs = require('fs')
 
+app.get('/video', (req, res) => {
+	fs.createReadStream("/video/video-stream.h264").pipe(res);
+  })
+
 drone.bind(dronePort)
 droneState.bind(droneStatePort)
 

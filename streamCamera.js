@@ -18,7 +18,7 @@ const streamFunction = async () => {
   await streamCamera.startCapture();
  
     // We can also listen to data events as they arrive
-    videoStream.on("data", data => console.log("New data", data));
+    //videoStream.on("data", data => console.log("New data", data));
     videoStream.on("end", data => console.log("Video stream has ended"));
  
     // Wait for 5 seconds
