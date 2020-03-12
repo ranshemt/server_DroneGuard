@@ -7,8 +7,9 @@ const streamFunction = async () => {
   });
   
   const videoStream = streamCamera.createStream();
+  console.log('writeStream will be created')
   const writeStream = fs.createWriteStream("/video/video-stream.h264");
-  
+  console.log('writeStream created')
   
   videoStream.pipe(writeStream);
 
