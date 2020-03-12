@@ -3,13 +3,13 @@ const { StreamCamera, Codec } = require("pi-camera-connect");
 
 const streamFunction = async () => {
   const streamCamera = new StreamCamera({
-    codec: Codec.H264
+    codec: Codec.MJPEG
   });
   
   const videoStream = streamCamera.createStream();
   let writeStream
   try {
-    writeStream = fs.createWriteStream(`${__dirname}/video/video-stream.h264`);
+    writeStream = fs.createWriteStream(`${__dirname}/video/video-stream.MJPEG`);
   } catch (error) {
     console.log(`error creating write stream: ${error.hasOwnProperty('message') ? error.message : error}`)
   }
